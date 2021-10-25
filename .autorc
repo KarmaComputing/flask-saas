@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "git-tag",
+    "released"
+  ],
+  "owner": "karmacomputing",
+  "repo": "flask-saas",
+  "name": "chrisjsimpson",
+  "email": "chris.j.simpson@live.co.uk"
+}
