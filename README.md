@@ -2,7 +2,7 @@
 
 This is a pip package which makes integrating Stripe connect easier between projects.
 
-It will automatically register some routes, needed to complete [Stripe connect](https://stripe.com/en-gb/connect) onboarding.
+It will automatically register some routes needed to complete [Stripe connect](https://stripe.com/en-gb/connect) onboarding.
 
 ## Example installation
 
