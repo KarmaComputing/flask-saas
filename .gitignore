@@ -1,0 +1,4 @@
+*.swp
+*__pycache__
+venv
+src/flask_saas.egg-info
