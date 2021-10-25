@@ -54,6 +54,8 @@ def create_app(test_config=None):
     @app.route("/")
     def hello_world():
         return "<p>Hello, World!</p>"
+
+    return app
 ```
 
 Start your app as normal `flask run`, then navigate to `/stripe-connect` and you will see the Stripe onboarding process.
