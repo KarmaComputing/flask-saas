@@ -27,6 +27,10 @@ pip install -e /path/to/where/you/cloned/this/repo
 In your main flask app, inside create_app
 
 ```
+from flask Flask
+
+from flask_saas import Flask_SaaS
+
 def create_app(test_config=None):
     app = Flask(__name__)
 
