@@ -22,6 +22,17 @@ cd <path/to/your flask/project>
 pip install -e /path/to/where/you/cloned/this/repo
 ```
 
+## Assumptions
+
+- You have a [Stripe account](https://dashboard.stripe.com/register)
+- In your existing flask appliction, you can/are storiing the following information somwhere/somehow in your app (e.g. in your config, database, 
+environment settings, a mix of either)
+    - stripe_secret_key
+    - stripe_business_profile
+    - stripe connect account id
+    - stripe_livemode (true/false, 1/0)
+    - stripe_connect_completed_status (true/false, 1/0) - a boolean to track if stripe connect onboarding has completed or not
+
 ## Example usage
 
 In your main flask app, inside create_app
