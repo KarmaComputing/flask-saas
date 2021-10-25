@@ -83,3 +83,8 @@ your Stripe key as an envrionment variable called `STRIPE_SECRET_KEY`, then you 
 def get_stripe_secret_key():
     return os.getenv("STRIPE_SECRET_KEY")
 ```
+
+# How does it work?
+
+It uses [Flask Blueprints](https://flask.palletsprojects.com/en/2.0.x/blueprints/) to register common routes needed
+for Stripe connect, so you don't have to write them.
