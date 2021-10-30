@@ -1,3 +1,15 @@
+# v0.0.4 (Sat Oct 30 2021)
+
+#### ⚠️ Pushed to `main`
+
+- add padding to Stripe onboarding template ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.3 (Sat Oct 30 2021)
 
 #### ⚠️ Pushed to `main`
