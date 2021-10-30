@@ -1,3 +1,16 @@
+# v0.0.2 (Sat Oct 30 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:KarmaComputing/flask-saas into main ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- add create_stripe_account_link ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.1 (Mon Oct 25 2021)
 
 #### ⚠️ Pushed to `main`
