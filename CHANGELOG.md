@@ -1,3 +1,16 @@
+# v0.0.3 (Sat Oct 30 2021)
+
+#### ⚠️ Pushed to `main`
+
+- include flask blueprint templates in package build via MANIFEST.ini ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- update build docs ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.2 (Sat Oct 30 2021)
 
 #### ⚠️ Pushed to `main`
