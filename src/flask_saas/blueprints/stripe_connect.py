@@ -19,13 +19,6 @@ stripe_connect = Blueprint(
 )  # noqa: E501
 
 
-def modify_stripe_account_capability(account_id):
-    """Request (again) card_payments capability after kyc onboarding
-    is complete"""
-    log.debug("Called modify_stripe_account_capability")
-    stripe.Account.modify_capability(account_id, "card_payments", requested=True)
-
-
 def _generate_account_link(account_id):
     """
     From the Stripe Docs:
@@ -50,7 +43,6 @@ def _generate_account_link(account_id):
 @stripe_connect.route("/stripe-set-livemode", methods=["POST"])
 def set_stripe_livemode():
     log.debug("Called set_stripe_livemode")
-    breakpoint()
     flask_saas: Flask_SaaS = current_app.config["flask_saas"]
     livemode = request.data.decode("utf-8")
     if livemode == "0" or livemode == "1":
@@ -90,7 +82,7 @@ def index() -> str:
         # Attempt to Updates an existing Account Capability to accept card payments
         try:
             account = flask_saas.get_stripe_connect_account()
-            modify_stripe_account_capability(account.id)
+            flask_saas.modify_stripe_account_capability(account.id)
         except Exception as e:
             log.error(f"Could not update card_payments capability for account. {e}")
 
@@ -113,7 +105,6 @@ def index() -> str:
 @stripe_connect.route("/stripe-onboard", methods=["POST"])
 def stripe_onboarding() -> jsonify:
     log.debug("called stripe_onboarding")
-
     flask_saas: Flask_SaaS = current_app.config["flask_saas"]
     stripe.api_key = flask_saas.get_stripe_secret_key()
 

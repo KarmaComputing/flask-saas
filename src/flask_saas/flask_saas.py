@@ -88,3 +88,30 @@ class Flask_SaaS:
         )
 
         return account
+
+    def create_stripe_account_link(
+        self, account_id: stripe.Account, refresh_url: str, return_url: str
+    ) -> str:
+        """
+        From the Stripe Docs: https://stripe.com/docs/api/account_links/create
+        A user that is redirected to your return_url might not have completed the
+        onboarding process. Use the /v1/accounts endpoint to retrieve the user’s
+        account and check for charges_enabled. If the account is not fully onboarded,
+        provide UI prompts to allow the user to continue onboarding later. The user
+        can complete their account activation through a new account link (generated
+        by your integration). You can check the state of the details_submitted
+        parameter on their account to see if they’ve completed the onboarding process.
+        """
+        account_link = stripe.AccountLink.create(
+            type="account_onboarding",
+            account=account_id,
+            refresh_url=refresh_url,
+            return_url=return_url,
+        )
+        return account_link.url
+
+    def modify_stripe_account_capability(self, account_id: str) -> None:
+        """Request (again) card_payments capability after kyc onboarding
+        is complete"""
+        log.debug("Called modify_stripe_account_capability")
+        stripe.Account.modify_capability(account_id, "card_payments", requested=True)
