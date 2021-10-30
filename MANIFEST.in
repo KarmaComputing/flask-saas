@@ -1,0 +1,2 @@
+graft src/flask_saas/blueprints/templates
+global-exclude *.pyc
