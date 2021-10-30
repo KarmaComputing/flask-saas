@@ -83,3 +83,11 @@ your Stripe key as an envrionment variable called `STRIPE_SECRET_KEY`, then you 
 def get_stripe_secret_key():
     return os.getenv("STRIPE_SECRET_KEY")
 ```
+
+## Building / Development
+
+```
+python3 -m pip install --upgrade build
+python3 -m build
+```
+See https://packaging.python.org/tutorials/packaging-projects/
