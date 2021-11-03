@@ -58,11 +58,11 @@ def create_app(test_config=None):
         get_stripe_business_profile=get_stripe_business_profile,
         get_stripe_connect_account=get_stripe_connect_account,
         get_stripe_livemode=get_stripe_livemode,
-        set_stripe_livemode=set_stripe_livemode,
+        set_stripe_livemode=set_stripe_livemode(livemode: int),
         get_stripe_connect_account_id=get_stripe_connect_account_id,
         set_stripe_connect_account_id=set_stripe_connect_account_id,
         get_stripe_connect_completed_status=get_stripe_connect_completed_status,
-        set_stripe_connect_completed_status=set_stripe_connect_completed_status,
+        set_stripe_connect_completed_status=set_stripe_connect_completed_status(status: bool),
     )
 
     @app.route("/")
