@@ -38,7 +38,8 @@ environment settings, a mix of either)
 In your main flask app, inside create_app
 
 ```
-from flask Flask
+from flask import Flask
+import os 
 
 from flask_saas import Flask_SaaS
 
@@ -77,7 +78,7 @@ your existing flask application. This makes `flask_saas` flexibily and (hopefull
 eaiser to integrate with your existing application/database or object store.
 
 For example, to implement `get_stripe_secret_key`, if your flask application stores
-your Stripe key as an envrionment variable called `STRIPE_SECRET_KEY`, then you might write:
+your Stripe key as an envrionment variable called `STRIPE_SECRET_KEY`, then you might write(Before Flask_Saas):
 
 ```
 def get_stripe_secret_key():
