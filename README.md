@@ -35,6 +35,8 @@ environment settings, a mix of either)
 
 ## Example usage
 
+
+### 1. 
 In your main flask app, inside create_app
 
 ```
@@ -78,12 +80,28 @@ your existing flask application. This makes `flask_saas` flexibily and (hopefull
 eaiser to integrate with your existing application/database or object store.
 
 For example, to implement `get_stripe_secret_key`, if your flask application stores
-your Stripe key as an envrionment variable called `STRIPE_SECRET_KEY`, then you might write(Before Flask_Saas):
+your Stripe key as an environment variable called `STRIPE_SECRET_KEY`, then you might write (before `Flask_Saas` instantiation):
 
 ```
 def get_stripe_secret_key():
     return os.getenv("STRIPE_SECRET_KEY")
 ```
+
+### 2. Create link to Stripe connect onboarding
+
+
+In your flask application, create a link to the route `stripe-connect.index` to start the Stripe onboarding process.
+
+For example: create a template called `stripe-connect.html`, and write:
+```
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Connect to Stripe</h2>
+  <a href="{{ url_for('stripe_connect.index') }}">Connect to Stripe</a>
+{% endblock %}
+
+```
+Reload your application, and you should see a link to stripe-connect.
 
 ## Building / Development
 
