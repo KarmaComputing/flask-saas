@@ -1,3 +1,16 @@
+# v0.0.6 (Wed Nov 03 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:KarmaComputing/flask-saas into main ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- update readme template example ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.5 (Wed Nov 03 2021)
 
 #### ⚠️ Pushed to `main`
